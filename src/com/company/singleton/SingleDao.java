@@ -6,9 +6,12 @@ public final class SingleDao {
     private String name;
     public static SingleDao dao = null;
 
+    private SingleDao() {
+    }
+
     public static SingleDao getInstance() {
         if (dao == null) {
-            dao =  new SingleDao();
+            dao = new SingleDao();
         }
         return dao;
     }
