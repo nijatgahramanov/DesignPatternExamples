@@ -6,3 +6,4 @@ public class Black implements Colour{
         System.out.println("Inside Black: method fill");
     }
 }
+

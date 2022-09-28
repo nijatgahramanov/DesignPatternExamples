@@ -2,30 +2,14 @@ package com.company.singleton;
 
 import java.util.Objects;
 
-public final class SingleDao {
-    private String name;
-    public static SingleDao dao = null;
+public class SingleDao {
+   private static final SingleDao INSTANCE = new SingleDao();
 
-//    private SingleDao() {
-//    }
-
-    public static SingleDao getInstance() {
-        if (dao == null) {
-            dao = new SingleDao();
-        }
-        return dao;
+    private SingleDao() {
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        SingleDao singleDao = (SingleDao) o;
-        return Objects.equals(name, singleDao.name);
+    public static SingleDao getInstance(){
+        return INSTANCE;
     }
 
-    @Override
-    public int hashCode() {
-        return Objects.hash(name);
-    }
 }

@@ -20,5 +20,7 @@ public class Main {
         Colour colour2 = colourFactory.getColour("Black");
         colour2.fill();// Inside Black : method fill
 
+
+
     }
 }
